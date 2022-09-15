@@ -2,21 +2,25 @@ package POOHeranca;
 
 public class Cavalo extends Animal {
 	
-	//Exercício 1 - POO Herança
+	//Exercício 1 - POO Herança e Polimorfismo
 	
 	public Cavalo(String nome,int idade) {
 		super(nome,idade);
 	}
 	
-	public String emitirSom(){
-		return "O cavalo está relinchando: *iiirrrrí*";
+	@Override
+	public void emitirSom() {
+		System.out.println("O cavalo está relinchando:*iiirrrrí* ");
 	}
 	
-	public String correr() {
-		return "O cavalo está correndo.";
+	@Override
+	public void acao() {
+		System.out.println("O cavalo está correndo.");
 	}
-	public void imprimir() {
-		System.out.println("\nNome do cavalo: "+getNome()+"\nIdade do cavalo: "+getIdade()+" anos \n"+emitirSom()+"\n"+correr());
-
-}
+	public void Imprimir() {
+		System.out.println("Nome do cavalo: "+getNome());
+		System.out.println("Idade do cavalo: "+getIdade()+" anos");
+		emitirSom();
+		acao();
+	}
 }

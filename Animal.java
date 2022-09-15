@@ -1,16 +1,22 @@
 package POOHeranca;
 
-public class Animal {
+public abstract class Animal {
 	
-	//Exercício 1 - POO Herança
+	//Exercício 1 - POO Herança e Polimorfismo
 	
-	private String nome;
-	private int idade;
+	 private String nome;
+	 int idade;
+	 
+	 public Animal(String nome, int idade) {
+		 this.nome = nome;
+		 this.idade = idade;
+				 
+	 }
 	
-	public Animal(String nome,int idade) {
-		this.nome = nome;
-		this.idade = idade;
-	}
+	abstract public void emitirSom();
+	abstract public void acao();
+	
+	
 
 	public String getNome() {
 		return nome;
@@ -28,5 +34,5 @@ public class Animal {
 		this.idade = idade;
 	}
 	
-	
-}
+	}
+
